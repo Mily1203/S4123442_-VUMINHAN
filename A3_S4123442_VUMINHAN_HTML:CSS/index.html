@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code-Based Expression</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:wght@300&display=swap" rel="stylesheet">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="loading-screen">
+        <div class="loading-bar-wrapper">
+            <div class="loading-info">
+                <span id="load-percentage" class="pixel-font">0</span>
+                <span class="percent-symbol">%</span>
+            </div>
+            <div id="loading-bar-container">
+                <div id="loading-bar"></div>
+            </div>
+            <span class="status-text">DATA EXTRACTION IN PROGRESS</span>
+        </div>
+    </div>
+
+    <div id="hold-space-container" style="display: none;">
+        <div id="hold-progress-bg">
+            <div id="hold-progress-fill"></div>
+        </div>
+        <div class="instruction-text">HOLD [SPACE] TO START</div>
+    </div>
+
+    <div id="hotspot" class="hotspot-trigger" style="display: none;">
+        <div id="hotspot-label">FACE RECOGNITION</div>
+    </div>
+
+    <div id="content-overlay">
+        <div class="overlay-header">
+            <h2 class="pixel-font" style="font-size: 80px; margin: 0;">SYSTEM SCAN</h2>
+        </div>
+        <div class="overlay-body" style="max-width: 600px; text-align: center; margin-top: 30px;">
+            <p class="instruction-text" style="line-height: 1.6; opacity: 1; font-size: 18px;">
+                INITIALIZING RECONSTRUCTION...<br>
+                PLEASE ENABLE WEBCAM TO CONTINUE.
+            </p>
+        </div>
+    </div>
+
+    <div id="chaos-trigger" class="hotspot-trigger" style="display: none;">
+       <div id="hotspot-label">THE CYBER WORLD IS VAST AND CHAOTIC</div>
+    </div> 
+
+    <div id="walk-trigger" class="hotspot-trigger" style="display: none;">
+        <div id="hotspot-label">ENTER THE VOID</div>
+    </div>
+
+    <div id="audio-hitbox"></div>
+    <div id="custom-cursor">
+        <div id="cursor-box"></div>
+    </div>
+
+    <script src="sketch.js"></script>
+</body>
+</html>
